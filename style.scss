@@ -264,102 +264,6 @@ header {
 	}
 }
 
-.more-details {
-	margin-bottom: 32px;
-	position: relative;
-
-	.container {
-		position: relative;
-
-		h3 {
-			position: relative;
-			font-size: clamp(20px, 2vw, 24px);
-			font-weight: 600;
-			margin-bottom: 16px;
-
-			&::after {
-				content: '';
-				position: absolute;
-				bottom: -4px;
-				right: 0;
-				width: 190px;
-				height: 3px;
-				background-color: #ff6122;
-			}
-		}
-
-		.phone,
-		.facebook {
-			display: flex;
-			align-items: center;
-			column-gap: 8px;
-			text-decoration: none;
-
-			p {
-				font-size: clamp(16px, 1.8vw, 18px);
-				font-weight: 700;
-				color: black;
-			}
-		}
-
-		.lock2 {
-			font-size: 8px;
-			position: relative;
-			width: 18em;
-			height: 13em;
-			border-radius: 2em;
-			top: 10em;
-			bottom: 0;
-			box-sizing: border-box;
-			border: 3.5em solid #ff6122;
-			border-right-width: 7.5em;
-			border-left-width: 7.5em;
-			margin: 0 0 6rem 0;
-			/* Animation */
-			-webkit-animation: mover 2s infinite alternate;
-			animation: mover 2s infinite alternate;
-			scale: 0.4;
-
-			position: absolute;
-			top: 15%;
-			left: -3%;
-			rotate: -10deg;
-		}
-
-		.lock2:before {
-			content: '';
-			box-sizing: border-box;
-			position: absolute;
-			border: 2.5em solid #ff6122;
-			border-bottom: none;
-			width: 14em;
-			height: 12em;
-			left: 50%;
-			margin-left: -7em;
-			top: -14em;
-			border-top-left-radius: 7em;
-			border-top-right-radius: 7em;
-			/* Animation */
-			transform-origin: 14% 40%;
-			animation: unlock 2s infinite;
-			animation-direction: alternate;
-		}
-
-		.lock2:after {
-			content: '';
-			box-sizing: border-box;
-			position: absolute;
-			border: 1em solid #ff6122;
-			width: 5em;
-			height: 8em;
-			border-radius: 2.5em;
-			left: 50%;
-			top: -1em;
-			margin-left: -2.5em;
-		}
-	}
-}
-
 .we-at-work {
 	margin-bottom: 32px;
 	position: relative;
@@ -394,93 +298,89 @@ header {
 }
 
 footer {
+	position: relative;
+	padding-block: 40px;
 	background-color: #ff6122;
-	padding-block: 30px;
 
-	h2 {
-		margin-top: unset;
-		color: white;
-	}
+	.container {
+		position: relative;
 
-	form {
-		div {
+		h3 {
+			position: relative;
+			font-size: clamp(30px, 3vw, 38px);
+			font-weight: 600;
+			margin-bottom: 16px;
+		}
+
+		.phone,
+		.facebook {
 			display: flex;
-			flex-direction: column;
+			align-items: center;
+			column-gap: 8px;
+			text-decoration: none;
 
-			label {
+			p {
 				font-size: clamp(16px, 1.8vw, 18px);
 				font-weight: 700;
-				margin-bottom: 4px;
-				color: white;
-			}
-
-			input,
-			textarea {
-				outline: none;
-				border: unset;
-				font-size: 16px;
-				width: 100%;
-				margin-bottom: 8px;
-				padding-block: 12px;
-				resize: none;
-				border-radius: 5px;
-				padding-inline: unset;
-				font-family: 'Heebo', sans-serif;
+				color: black;
+				text-decoration: underline;
 			}
 		}
 
-		> input {
-			width: 100%;
-			margin-top: 8px;
-			background: white;
-			color: black;
-			padding-block: 8px;
-			border-radius: 5px;
-			border: unset;
-			font-size: clamp(16px, 1.8vw, 18px);
-			transition: all 0.4s ease;
+		.lock2 {
+			font-size: 8px;
+			position: relative;
+			width: 18em;
+			height: 13em;
+			border-radius: 2em;
+			top: 10em;
+			bottom: 0;
+			box-sizing: border-box;
+			border: 3.5em solid #fff;
+			border-right-width: 7.5em;
+			border-left-width: 7.5em;
+			margin: 0 0 6rem 0;
+			/* Animation */
+			-webkit-animation: mover 2s infinite alternate;
+			animation: mover 2s infinite alternate;
+			scale: 0.4;
 
-			&:hover {
-				background: black;
-				color: white;
-			}
-		}
-	}
-
-	.thank-you-wrapper {
-		position: fixed;
-		inset: 0;
-		background-color: rgba(0, 0, 0, 0.3);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-
-		opacity: 0;
-		visibility: hidden;
-		transition: all 0.4s ease;
-
-		&.show {
-			visibility: visible;
-			opacity: 1;
+			position: absolute;
+			top: 15%;
+			left: -3%;
+			rotate: -10deg;
 		}
 
-		.thank-you {
-			width: min(700px, 95%);
-			background-color: white;
-			border-radius: 20px;
-			padding-block: min(100px, 12vw);
-			text-align: center;
+		.lock2:before {
+			content: '';
+			box-sizing: border-box;
+			position: absolute;
+			border: 2.5em solid #fff;
+			border-bottom: none;
+			width: 14em;
+			height: 12em;
+			left: 50%;
+			margin-left: -7em;
+			top: -14em;
+			border-top-left-radius: 7em;
+			border-top-right-radius: 7em;
+			/* Animation */
+			transform-origin: 14% 40%;
+			animation: unlock 2s infinite;
+			animation-direction: alternate;
+		}
 
-			h2 {
-				font-size: clamp(24px, 3vw, 32px);
-				color: #333333;
-				margin-bottom: 8px;
-			}
-			p {
-				font-size: clamp(20px, 2.4vw, 24px);
-				color: #333333;
-			}
+		.lock2:after {
+			content: '';
+			box-sizing: border-box;
+			position: absolute;
+			border: 1em solid #fff;
+			width: 5em;
+			height: 8em;
+			border-radius: 2.5em;
+			left: 50%;
+			top: -1em;
+			margin-left: -2.5em;
 		}
 	}
 }

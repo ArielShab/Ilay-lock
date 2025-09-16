@@ -39,8 +39,6 @@ for (var i = 0; i < 40; i++) {
 	}
 } // make lock sticks
 
-const contactForm = document.querySelector('form');
-const thankYou = document.querySelector('.thank-you-wrapper');
 document.addEventListener('DOMContentLoaded', function () {
 	const splide = new Splide('.splide', {
 		type: 'loop',
@@ -60,13 +58,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	splide.mount();
-
-	contactForm.addEventListener('submit', function (e) {
-		e.preventDefault();
-		thankYou.classList.add('show');
-	});
-});
-
-thankYou.addEventListener('click', function () {
-	window.location.reload();
 });
